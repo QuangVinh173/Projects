@@ -4,3 +4,7 @@
 
 - Before loading eth.ko, it's recommended to remove existed module usb out of kernel:
 "echo 4a100000.switch | sudo tee /sys/bus/platform/drivers/cpsw-switch/unbind"
+
+- Then, we assign IP and set it up:
+ 'sudo ip addr add 192.168.7.2/24 dev eth0'
+ 'sudo ip link set eth0 up'
